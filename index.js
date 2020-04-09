@@ -7,7 +7,7 @@ const postsRouter = require("./posts/postRouter");
 
 app.use(express.json());
 app.use(logger);
-app.get("/", () => {
+app.get("/", (req, res) => {
   res.status(200).json(process.env.MESSAGE);
 });
 app.use("/api/users", userRouter.router);
