@@ -9,6 +9,6 @@ app.use(logger);
 app.use("/api/users", userRouter.router);
 app.use("/api/posts", postsRouter);
 
-app.listen(5005, () => {
+app.listen(process.env.PORT || 4444, () => {
   console.log("listening on port 5005");
 });
