@@ -77,7 +77,7 @@ function validateUser(req, res, next) {
 
 function validatePost(req, res, next) {
   console.log(req.body);
-  req.body === null
+  req.body == {}
     ? res.status(400).json({ error: "missing post data" })
     : !req.body.hasOwnProperty("text")
     ? res.status(400).json({ error: "missing required text field" })

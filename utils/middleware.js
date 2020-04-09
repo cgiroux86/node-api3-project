@@ -1,8 +1,8 @@
 const logger = (req, res, next) => {
   const time = new Date().toString();
-  const url = req.originalUrl;
-  const reqType = req.mehtod;
-  console.log(`time: ${time}, url: ${url}, type: ${reqType}`);
+  const url = req.path;
+  const reqType = req.method;
+  console.log(`time: ${time}, url: localhost:5005${url}, type: ${reqType}`);
   next();
 };
 
